@@ -52,6 +52,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# Gemfile
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
