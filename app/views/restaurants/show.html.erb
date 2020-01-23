@@ -1,4 +1,31 @@
-<h2><%= @restaurant.name %></h2>
+<div class="card-category"
+style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+url(https://source.unsplash.com/800x600/?restaurant)">
+  <%= @restaurant.name %>
+</div>
+
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.category %></p>
+
+<%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>
+
+ <% @reviews.each do |review| %>
+<div class = "card-product mb-5 mt-5">
+    <div class="col-12 ">
+        <div class="card-product-infos">
+          <div>
+            <h2><%= review.content%></h2>
+            <p><%= review.rating%></p>
+          </div>
+        </div>
+    </div>
+
+</div>
+ <% end %>
+
 <%= link_to "Restaurant List", restaurants_path, class: "btn btn-primary"%>
+
+<!--  <% @reviews.each do |review| %>
+  <h2><%= review.content%></h2>
+            <p><%= review.rating%></p>
+            <% end %> -->
